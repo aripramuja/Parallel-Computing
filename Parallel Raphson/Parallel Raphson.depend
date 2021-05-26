@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1622037537 source:d:\universitas pertamina\up18 - semester 6\komputasi paralel dan terdistribusi\program\paralel secant & nr\parallel raphson\main.cpp
+	<iostream>
+	<conio.h>
+	<math.h>
+	<stdlib.h>
+	<omp.h>
+
