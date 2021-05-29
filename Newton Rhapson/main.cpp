@@ -24,9 +24,9 @@ int main()
     double hnNow=0;
     double error=1000;
     double eTolerance=0.0000000000000000000001;
-    double hn=6000;
-    double Fhn=FhnFun(hn,750,1200,1800,6000);
-    double FhnDerivative=FhnDerivativeFun(hn,750,1200,1800,6000);
+    double hn=0.6;
+    double Fhn=FhnFun(hn,0.075,1.2,1.8,0.6);
+    double FhnDerivative=FhnDerivativeFun(hn,0.075,1.2,1.8,0.6);
     double HnplusSatu=NR(hn, Fhn,FhnDerivative);
     cout<<"Iteration = "<<iteration<<endl;
     cout<<"hn = "<<hn<<endl;
@@ -36,8 +36,8 @@ int main()
     hn=HnplusSatu;
     while(error>=eTolerance){
         hnBefore=hn;
-        double Fhn=FhnFun(hn,750,1200,1800,6000);
-        double FhnDerivative=FhnDerivativeFun(hn,750,1200,1800,6000);
+        double Fhn=FhnFun(hn,0.0075,0.12,0.18,0.06);
+        double FhnDerivative=FhnDerivativeFun(hn,0.0075,0.12,0.18,0.06);
         double HnplusSatu=NR(hn, Fhn,FhnDerivative);
         hnNow=HnplusSatu;
         error=Error(hnBefore,hnNow);
@@ -59,8 +59,8 @@ int main()
     error=1000;
     eTolerance=0.0000000000000000000001;
     hn=HnplusSatu;
-    Fhn=FhnFun(hn,75,120,180,600);
-    FhnDerivative=FhnDerivativeFun(hn,75,120,180,600);
+    Fhn=FhnFun(hn,0.075,1.2,1.8,0.6);
+    FhnDerivative=FhnDerivativeFun(hn,0.075,1.2,1.8,0.6);
     HnplusSatu=NR(hn, Fhn,FhnDerivative);
     cout<<"Iteration = "<<iteration<<endl;
     cout<<"hn = "<<hn<<endl;
@@ -70,8 +70,8 @@ int main()
     hn=HnplusSatu;
     while(error>=eTolerance){
         hnBefore=hn;
-        Fhn=FhnFun(hn,75,120,180,600);
-        FhnDerivative=FhnDerivativeFun(hn,75,120,180,600);
+        Fhn=FhnFun(hn,0.0075,0.12,0.18,0.06);
+        FhnDerivative=FhnDerivativeFun(hn,0.0075,0.12,0.18,0.06);
         HnplusSatu=NR(hn, Fhn,FhnDerivative);
         hnNow=HnplusSatu;
         error=Error(hnBefore,hnNow);
